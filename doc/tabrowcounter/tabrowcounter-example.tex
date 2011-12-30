@@ -13,32 +13,24 @@
 \setcounter{page}{6}
 
 \begin{table}[H]
-\centering
-\caption{First table}
-\label{tab:num1}
-\begin{tabular}{r|r}
-
-\# & value \tabularnewline
-
-\tabrowno{ref:row1} & blub \tabularnewline
-
-\tabrowno{ref:row2} & blub \tabularnewline
-
-\end{tabular}
+  \centering
+  \caption{First table}
+  \label{tab:num1}
+  \begin{tabular}{r|r}
+    \# & value \tabularnewline
+    \tabrowno{ref:row1} & blub \tabularnewline
+    \tabrowno{ref:row2} & blub \tabularnewline
+  \end{tabular}
 \end{table}
 
+\qquad
+\qquad
+
 \begin{longtable}{r|r}
-\caption{Second table}\label{tab:num2} \\
-
-\qquad
-\qquad
-
-\# & value \tabularnewline
-
-\tabrowno{ref:row3} & blub \tabularnewline
-
-\tabrowno{ref:row4} & blub \tabularnewline
-
+  \caption{Second table}\label{tab:num2} \\
+  \# & value \tabularnewline
+  \tabrowno{ref:row3} & blub \tabularnewline
+  \tabrowno{ref:row4} & blub \tabularnewline
 \end{longtable}
 
 Reference 1 in Table \ref{tab:num1}: value \ref{ref:row1}, page \pageref{ref:row1} \\

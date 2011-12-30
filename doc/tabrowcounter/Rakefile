@@ -1,3 +1,0 @@
-task :clean do
-  sh "rm -f *.aux *.log *.pdf"
-end

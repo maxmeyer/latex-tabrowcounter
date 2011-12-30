@@ -1,0 +1,14 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tabrowcounter}
+\RequirePackage{etoolbox}
+\RequirePackage{refcount}
+\makeatletter
+\let\rc@refused\refused
+\makeatother
+\preto\tabular{\setcounter{tab@rowcnt}{0}}
+\preto\longtable{\setcounter{tab@rowcnt}{0}}
+\newcounter{tab@rowcnt}
+\newcommand{\tabrowno}[1]{
+  \refstepcounter{tab@rowcnt}\label{#1}\setcounterref{tab@rowcnt}{#1}\arabic{tab@rowcnt}
+}
+\endinput

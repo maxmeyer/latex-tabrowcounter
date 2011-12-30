@@ -1,0 +1,43 @@
+\documentclass{scrreprt}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{tabrowcounter}
+
+\begin{document}
+
+\chapter{Chapter}
+
+%page 6 to distinguish between value of reference and page
+\setcounter{page}{6}
+
+\begin{table}[H]
+  \centering
+  \caption{First table}
+  \label{tab:num1}
+  \begin{tabular}{r|r}
+    \# & value \tabularnewline
+    \tabrowno{ref:row1} & blub \tabularnewline
+    \tabrowno{ref:row2} & blub \tabularnewline
+  \end{tabular}
+\end{table}
+
+\qquad
+\qquad
+
+\begin{longtable}{r|r}
+  \caption{Second table}\label{tab:num2} \\
+  \# & value \tabularnewline
+  \tabrowno{ref:row3} & blub \tabularnewline
+  \tabrowno{ref:row4} & blub \tabularnewline
+  \tabrowno{ref:row5} & blub \tabularnewline
+\end{longtable}
+
+Reference 1 in Table \ref{tab:num1}: value \ref{ref:row1}, page \pageref{ref:row1} \\
+Reference 2 in Table \ref{tab:num1}: value \ref{ref:row2}, page \pageref{ref:row2} \\
+Reference 3 in Table \ref{tab:num2}: value \ref{ref:row3}, page \pageref{ref:row3} \\
+Reference 4 in Table \ref{tab:num2}: value \ref{ref:row4}, page \pageref{ref:row4} \\
+Reference 5 in Table \ref{tab:num2}: value \ref{ref:row5}, page \pageref{ref:row5} \\
+
+\end{document}
